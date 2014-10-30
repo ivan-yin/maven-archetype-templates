@@ -19,5 +19,5 @@ Installation:
 
 
 4. Repeat the same steps for all the archetype templates.
-5. From Your IDE, while creating maven project filter the archetypes using 'com.sivalabs' and choose the template you want.
+5. From Your IDE, while creating maven project filter the archetypes using 'com.ifzer' and choose the template you want.
 6. Enjoy :-)
