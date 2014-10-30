@@ -4,11 +4,10 @@
 		http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.sivalabs.maven.archetypes</groupId>
-  <artifactId>sivalabs-quickstart-archetypes</artifactId>
+  <groupId>com.ifzer</groupId>
+  <artifactId>ifzer-quickstart-archetypes</artifactId>
   <version>0.0.1</version>
   <packaging>pom</packaging>
-  <name>sivalabs-quickstart-archetypes</name>
-  
+  <name>ifzer-quickstart-archetypes</name>
   
 </project>
