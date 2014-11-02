@@ -2,84 +2,88 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.sivalabs.maven.archetypes</groupId>
+  <groupId>com.ifzer</groupId>
   <artifactId>quickstart-java-app</artifactId>
   <version>0.0.1</version>
   <packaging>jar</packaging>
 
   <name>quickstart-java-app</name>
-  <url>http://sivalabs.blogspot.in</url>
-  <description>Java app with JDK 1.6 and SLF4J configuration.</description>
+  <url>http://www.ifzer.com</url>
+  <description>Java app with JDK 1.7 and SLF4J configuration.</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <java.version>1.6</java.version>
-    <junit.version>4.9</junit.version>
-    <slf4j.version>1.6.4</slf4j.version>
-    <logback.version>1.0.1</logback.version>
+    <java.version>1.7</java.version>
+    <junit.version>4.11</junit.version>
+    <slf4j.version>1.7.7</slf4j.version>
+    <logback.version>1.1.2</logback.version>
+    <!--
     <log4j.version>1.2.14</log4j.version>
-    
-    <maven.compiler.plugin>2.3.2</maven.compiler.plugin>
-    <maven.failsafe.plugin>2.4.3-alpha-1</maven.failsafe.plugin>
-        
-  </properties>
+    <log4j2.version>2.0.2</log4j2.version>
+  -->
 
-	<build>
-		<finalName>${project.artifactId}</finalName>
-		<plugins>
-			<plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven.compiler.plugin}</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                </configuration>
-            </plugin>
-            <plugin>
-		        <groupId>org.codehaus.mojo</groupId>
-		        <artifactId>failsafe-maven-plugin</artifactId>
-		        <version>${maven.failsafe.plugin}</version>
-		        <executions>
-		          <execution>
-		            <goals>
-		              <goal>integration-test</goal>
-		              <goal>verify</goal>
-		            </goals>
-		          </execution>
-		        </executions>
-		      </plugin>
-		</plugins>
-	</build>
-	
-  <dependencies>
-  
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>${junit.version}</version>
-      <scope>test</scope>
-    </dependency>
-    
-    <dependency>
-         <groupId>org.slf4j</groupId>
-         <artifactId>slf4j-api</artifactId>
-         <version>${slf4j.version}</version>
-     </dependency>
-     
-	<!-- <dependency>
-	  <groupId>ch.qos.logback</groupId>
-	  <artifactId>logback-classic</artifactId>
-	  <version>${logback.version}</version>
-	 </dependency>
-	
-	 <dependency>
-	  <groupId>ch.qos.logback</groupId>
-	  <artifactId>logback-core</artifactId>
-	  <version>${logback.version}</version>
-	 </dependency> -->
-			 
+  <maven.compiler.plugin>2.3.2</maven.compiler.plugin>
+  <maven.failsafe.plugin>2.4.3-alpha-1</maven.failsafe.plugin>
+
+</properties>
+
+<build>
+  <finalName>${project.artifactId}</finalName>
+  <plugins>
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>${maven.compiler.plugin}</version>
+    <configuration>
+      <source>${java.version}</source>
+      <target>${java.version}</target>
+      <encoding>${project.build.sourceEncoding}</encoding>
+    </configuration>
+  </plugin>
+  <plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>failsafe-maven-plugin</artifactId>
+    <version>${maven.failsafe.plugin}</version>
+    <executions>
+      <execution>
+        <goals>
+          <goal>integration-test</goal>
+          <goal>verify</goal>
+        </goals>
+      </execution>
+    </executions>
+  </plugin>
+</plugins>
+</build>
+
+<dependencies>
+
+  <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>${junit.version}</version>
+    <scope>test</scope>
+  </dependency>
+
+  <dependency>
+   <groupId>org.slf4j</groupId>
+   <artifactId>slf4j-api</artifactId>
+   <version>${slf4j.version}</version>
+ </dependency>
+
+ <dependency>
+   <groupId>ch.qos.logback</groupId>
+   <artifactId>logback-classic</artifactId>
+   <version>${logback.version}</version>
+ </dependency>
+
+ <dependency>
+   <groupId>ch.qos.logback</groupId>
+   <artifactId>logback-core</artifactId>
+   <version>${logback.version}</version>
+ </dependency>
+
+	 <!--
      <dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
@@ -91,8 +95,16 @@
 			<artifactId>log4j</artifactId>
 			<version>${log4j.version}</version>
 			<scope>runtime</scope>
-		</dependency> 
-          
+		</dependency>
+
+<dependency>
+		<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j2.version}</version>
+			</dependency>
+
+
+    -->
   </dependencies>
-  
+
 </project>
